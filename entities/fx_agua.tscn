@@ -1,0 +1,47 @@
+[gd_scene load_steps=8 format=2]
+
+[sub_resource type="Gradient" id=1]
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+
+[sub_resource type="Curve" id=3]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.353409 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=4]
+curve = SubResource( 3 )
+
+[sub_resource type="ParticlesMaterial" id=5]
+lifetime_randomness = 0.1
+emission_shape = 1
+emission_sphere_radius = 1.0
+direction = Vector3( 0, 0, 0 )
+gravity = Vector3( 0, 0, -55 )
+linear_accel = -100.0
+scale_curve = SubResource( 4 )
+color_ramp = SubResource( 2 )
+hue_variation = 0.02
+hue_variation_random = 0.2
+
+[sub_resource type="SpatialMaterial" id=6]
+albedo_color = Color( 0, 0.788235, 1, 1 )
+
+[sub_resource type="CapsuleMesh" id=7]
+material = SubResource( 6 )
+radius = 0.05
+mid_height = 2.408
+radial_segments = 8
+rings = 4
+
+[node name="fx_agua" type="Spatial"]
+
+[node name="Particles" type="Particles" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0 )
+amount = 20
+lifetime = 1.49
+preprocess = 0.45
+speed_scale = 4.9
+randomness = 0.15
+visibility_aabb = AABB( -0.597, -0.724, -0.63, 1.194, 1.449, 1.126 )
+process_material = SubResource( 5 )
+draw_pass_1 = SubResource( 7 )

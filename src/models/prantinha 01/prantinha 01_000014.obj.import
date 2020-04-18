@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/prantinha 01_000014.obj-51840d76f8e350e5782b8915de3f1485.mesh"
+
+[deps]
+
+files=[ "res://.import/prantinha 01_000014.obj-51840d76f8e350e5782b8915de3f1485.mesh" ]
+
+source_file="res://src/models/prantinha 01/prantinha 01_000014.obj"
+dest_files=[ "res://.import/prantinha 01_000014.obj-51840d76f8e350e5782b8915de3f1485.mesh", "res://.import/prantinha 01_000014.obj-51840d76f8e350e5782b8915de3f1485.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

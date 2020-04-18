@@ -1,0 +1,84 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://src/models/prantinha 01/prantinha 01_000010.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://src/models/prantinha 01/prantinha 01_000007.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://src/models/prantinha 01/prantinha 01_000008.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://src/models/prantinha 01/prantinha 01_000009.obj" type="ArrayMesh" id=4]
+[ext_resource path="res://src/models/prantinha 01/prantinha 01_000004.obj" type="ArrayMesh" id=5]
+[ext_resource path="res://src/models/prantinha 01/prantinha 01_000002.obj" type="ArrayMesh" id=6]
+[ext_resource path="res://src/models/prantinha 01/prantinha 01_000005.obj" type="ArrayMesh" id=7]
+[ext_resource path="res://src/models/prantinha 01/prantinha 01_000001.obj" type="ArrayMesh" id=8]
+[ext_resource path="res://src/models/prantinha 01/prantinha 01_000003.obj" type="ArrayMesh" id=9]
+[ext_resource path="res://src/models/prantinha 01/prantinha 01_000006.obj" type="ArrayMesh" id=10]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.602681, 1, 0.628306 )
+
+[node name="prantinha" type="Spatial"]
+
+[node name="1" type="MeshInstance" parent="."]
+mesh = ExtResource( 8 )
+material/0 = null
+material/1 = null
+
+[node name="2" type="MeshInstance" parent="."]
+visible = false
+mesh = ExtResource( 6 )
+material/0 = null
+material/1 = null
+
+[node name="3" type="MeshInstance" parent="."]
+visible = false
+mesh = ExtResource( 9 )
+material/0 = null
+material/1 = null
+
+[node name="4" type="MeshInstance" parent="."]
+visible = false
+mesh = ExtResource( 5 )
+material/0 = null
+material/1 = null
+
+[node name="5" type="MeshInstance" parent="."]
+visible = false
+mesh = ExtResource( 7 )
+material/0 = null
+material/1 = null
+
+[node name="6" type="MeshInstance" parent="."]
+visible = false
+mesh = ExtResource( 10 )
+material/0 = null
+material/1 = null
+
+[node name="7" type="MeshInstance" parent="."]
+visible = false
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+
+[node name="8" type="MeshInstance" parent="."]
+visible = false
+mesh = ExtResource( 3 )
+material/0 = null
+material/1 = null
+
+[node name="9" type="MeshInstance" parent="."]
+visible = false
+mesh = ExtResource( 4 )
+material/0 = null
+material/1 = null
+
+[node name="10" type="MeshInstance" parent="."]
+visible = false
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+
+[node name="Area" type="Area" parent="." groups=[
+"prantinha",
+]]
+
+[node name="CollisionShape" type="CollisionShape" parent="Area"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.13982, 0 )
+shape = SubResource( 1 )
