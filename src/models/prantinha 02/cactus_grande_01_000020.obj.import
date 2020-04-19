@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/cactus_grande_01_000020.obj-246c3533ee86b5829534a857706a72c5.mesh"
+
+[deps]
+
+files=[ "res://.import/cactus_grande_01_000020.obj-246c3533ee86b5829534a857706a72c5.mesh" ]
+
+source_file="res://src/models/prantinha 02/cactus_grande_01_000020.obj"
+dest_files=[ "res://.import/cactus_grande_01_000020.obj-246c3533ee86b5829534a857706a72c5.mesh", "res://.import/cactus_grande_01_000020.obj-246c3533ee86b5829534a857706a72c5.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

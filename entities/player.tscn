@@ -87,7 +87,10 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.58125, 0 )
 script = ExtResource( 5 )
 Sensitivity_X = 0.01
 Sensitivity_Y = 0.01
-Maximum_Y_Look = 90
+Maximum_Y_Look = 65
+Accelaration = 2
+Maximum_Walk_Speed = 6
+Jump_Speed = 3
 
 [node name="Camera" type="Camera" parent="Player"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.13899, -1.36769 )

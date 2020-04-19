@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/fx_water_up.obj-8da988dd6aa8ab9b400bdd88d621e53c.mesh"
+
+[deps]
+
+files=[ "res://.import/fx_water_up.obj-8da988dd6aa8ab9b400bdd88d621e53c.mesh" ]
+
+source_file="res://src/models/fx_water_up.obj"
+dest_files=[ "res://.import/fx_water_up.obj-8da988dd6aa8ab9b400bdd88d621e53c.mesh", "res://.import/fx_water_up.obj-8da988dd6aa8ab9b400bdd88d621e53c.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

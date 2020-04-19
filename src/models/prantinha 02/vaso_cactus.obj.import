@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/vaso_cactus.obj-63676f015fb00ccf8ed137abb4c81026.mesh"
+
+[deps]
+
+files=[ "res://.import/vaso_cactus.obj-63676f015fb00ccf8ed137abb4c81026.mesh" ]
+
+source_file="res://src/models/prantinha 02/vaso_cactus.obj"
+dest_files=[ "res://.import/vaso_cactus.obj-63676f015fb00ccf8ed137abb4c81026.mesh", "res://.import/vaso_cactus.obj-63676f015fb00ccf8ed137abb4c81026.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

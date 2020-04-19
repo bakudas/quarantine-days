@@ -21,6 +21,8 @@ var planta_child_count = 1
 onready var popup_item : Node = get_node("../PopupPanel")
 onready var regador : Node = get_node("Camera/regador")
 onready var fx_agua : Node = get_node("Camera/regador/fx_agua")
+onready var _fx_agua_up : PackedScene = preload("res://entities/fx_water_up.tscn")
+
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -95,6 +97,7 @@ func _input(event):
 			temp_item.get_child(planta_child_count).visible = true
 			planta_child_count += 1
 			print(planta_child_count)
+			fx_water_up()
 	else:
 		fx_agua.visible = false
 		
@@ -116,3 +119,9 @@ func _on_trigger_area_entered(area):
 func _on_trigger_area_exited(area):
 	planta_active = false
 	popup_item.hide()
+	
+func fx_water_up() -> void:
+	var fx_agua_up = _fx_agua_up.instance()
+	fx_agua_up.translation = temp_item.translation
+	add_child(fx_agua_up)
+

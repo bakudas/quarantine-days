@@ -8,9 +8,68 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "GraphNode",
+"class": "ASM_GN",
+"language": "GDScript",
+"path": "res://addons/ASM/scr/ASM_GN.gd"
+}, {
+"base": "GraphEdit",
+"class": "ASM_GraphEdit",
+"language": "GDScript",
+"path": "res://addons/ASM/scr/ASM_GraphEdit.gd"
+}, {
+"base": "Reference",
+"class": "Compiler",
+"language": "GDScript",
+"path": "res://addons/ASM/scr/Compiler.gd"
+}, {
+"base": "Reference",
+"class": "CustomStateMachine",
+"language": "GDScript",
+"path": "res://addons/ASM/compiled/CustomStateMachine.gd"
+}, {
+"base": "Control",
+"class": "GraphController",
+"language": "GDScript",
+"path": "res://addons/ASM/scr/GraphController.gd"
+}, {
+"base": "Panel",
+"class": "JSONViewer",
+"language": "GDScript",
+"path": "res://addons/ASM/scr/JSON_Viewer.gd"
+}, {
+"base": "Reference",
+"class": "RegexCompiler",
+"language": "GDScript",
+"path": "res://addons/ASM/scr/RegexCompiler.gd"
+}, {
+"base": "Reference",
+"class": "ScriptManager",
+"language": "GDScript",
+"path": "res://addons/ASM/scr/ScriptManager.gd"
+}, {
+"base": "Resource",
+"class": "State",
+"language": "GDScript",
+"path": "res://addons/ASM/scr/Resources/State.gd"
+}, {
+"base": "Reference",
+"class": "StateMachine",
+"language": "GDScript",
+"path": "res://addons/ASM/scr/StateMachine.gd"
+} ]
 _global_script_class_icons={
-
+"ASM_GN": "",
+"ASM_GraphEdit": "",
+"Compiler": "",
+"CustomStateMachine": "",
+"GraphController": "",
+"JSONViewer": "",
+"RegexCompiler": "",
+"ScriptManager": "",
+"State": "",
+"StateMachine": ""
 }
 
 [application]
@@ -18,6 +77,10 @@ _global_script_class_icons={
 config/name="LD46"
 run/main_scene="res://scenes/sala.tscn"
 config/icon="res://icon.png"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "ASM", "godot_sheets", "godotp-folder-structure", "todo" )
 
 [input]
 
