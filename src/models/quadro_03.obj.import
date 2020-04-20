@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/quadro_03.obj-f7b835fa52fc6a52b415e260b8dee170.mesh"
+
+[deps]
+
+files=[ "res://.import/quadro_03.obj-f7b835fa52fc6a52b415e260b8dee170.mesh" ]
+
+source_file="res://src/models/quadro_03.obj"
+dest_files=[ "res://.import/quadro_03.obj-f7b835fa52fc6a52b415e260b8dee170.mesh", "res://.import/quadro_03.obj-f7b835fa52fc6a52b415e260b8dee170.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

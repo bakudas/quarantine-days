@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/vaso_voador.obj-88af2bd8e1e4ca3fda831c78a24b2a60.mesh"
+
+[deps]
+
+files=[ "res://.import/vaso_voador.obj-88af2bd8e1e4ca3fda831c78a24b2a60.mesh" ]
+
+source_file="res://src/models/vaso_voador.obj"
+dest_files=[ "res://.import/vaso_voador.obj-88af2bd8e1e4ca3fda831c78a24b2a60.mesh", "res://.import/vaso_voador.obj-88af2bd8e1e4ca3fda831c78a24b2a60.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

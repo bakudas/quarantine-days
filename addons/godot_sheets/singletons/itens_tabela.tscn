@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Node
+export var itens:Dictionary
+"
+
+[node name="Node" type="Node"]
+script = SubResource( 1 )
+itens = {
+"ferramentas": [ "30", "false" ],
+"regador": [ "50", "false" ],
+"sementes": [ "5", "false" ],
+"terra": [ "10", "false" ]
+}

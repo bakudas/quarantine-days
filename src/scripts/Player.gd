@@ -1,5 +1,9 @@
 extends KinematicBody
 
+signal estou_vendo_item
+signal nao_estou_vendo_item
+signal que_item_vejo
+
 export var Sensitivity_X : float = 0.1
 export var Sensitivity_Y : float = 0.1
 export var Invert_Y_Axis : bool = false
@@ -9,7 +13,7 @@ export var Accelaration : int = 5
 export var Maximum_Walk_Speed : int = 10
 export var Jump_Speed : int = 2
 
-const GRAVITY : float = 0.098
+const GRAVITY : float = 0.0
 var velocity : Vector3 = Vector3(0,0,0)
 var forward_velocity : float = 0
 var Walk_Speed : float = 0
@@ -28,7 +32,6 @@ func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	forward_velocity = Walk_Speed
 	set_process(true)
-	popup_item.hide()
 	
 
 func _process(delta) -> void:
@@ -82,46 +85,27 @@ func _input(event):
 	
 	if event is InputEventMouseMotion:
 		rotate_y(-Sensitivity_X * event.relative.x)
-	
-	if Input.is_key_pressed(KEY_E) and popup_item.is_visible_in_tree():
-		popup_item.hide()
-		regador.visible = true
-		temp_item.queue_free()
-		item_active = temp_item.name
-		temp_item = null
 
-	if item_active == "regador" and Input.is_action_pressed("action"):
-		fx_agua.visible = true
-		
-		if planta_active:
-			temp_item.get_child(planta_child_count).visible = true
-			planta_child_count += 1
-			print(planta_child_count)
-			fx_water_up()
-	else:
-		fx_agua.visible = false
-		
 
 func _on_trigger_area_entered(area):
-	temp_item = area.get_parent()
-	print(temp_item.name)
-	
-	if area.is_in_group("item") and temp_item.is_visible_in_tree():
-		popup_item.popup()
-		
-	if area.is_in_group("prantinha"):
-		planta_active = true
-		temp_item = area.get_parent()
-		print(area.get_parent().name + "AHsDAHSDAHS")
+	if area.is_in_group("item"):
+		_estou_vendo_item()
+		area.get_parent()._atualiza_item_pick_up()
 		
 
 
 func _on_trigger_area_exited(area):
-	planta_active = false
-	popup_item.hide()
+	emit_signal("nao_estou_vendo_item")
+	pass
 	
-func fx_water_up() -> void:
-	var fx_agua_up = _fx_agua_up.instance()
-	fx_agua_up.translation = temp_item.translation
-	add_child(fx_agua_up)
+func _estou_vendo_item() -> void:
+	emit_signal("estou_vendo_item")
+	pass
+	
+
+
+
+
+
+
 
