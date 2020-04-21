@@ -22,9 +22,10 @@ var item_active
 var planta_active : bool = false
 var planta_child_count = 1
 
-onready var popup_item : Node = get_node("../PopupPanel")
-onready var regador : Node = get_node("Camera/regador")
-onready var fx_agua : Node = get_node("Camera/regador/fx_agua")
+
+onready var regador : Node = get_node("Camera/item/regador")
+onready var tools : Node = get_node("Camera/item/tools")
+onready var fx_agua : Node = get_node("Camera/item/regador/fx_agua")
 onready var _fx_agua_up : PackedScene = preload("res://entities/fx_water_up.tscn")
 
 
@@ -35,10 +36,13 @@ func _ready() -> void:
 	
 
 func _process(delta) -> void:
+	_escuta_item_ativo()
+	
+	
 	if Exit_On_Escape:
 		if Input.is_key_pressed(KEY_ESCAPE):
 			get_tree().quit()
-			
+
 
 
 func _physics_process(delta) -> void:
@@ -82,26 +86,43 @@ func _physics_process(delta) -> void:
 
 
 func _input(event):
+	var action = Input.is_action_just_pressed("action")
 	
 	if event is InputEventMouseMotion:
 		rotate_y(-Sensitivity_X * event.relative.x)
+		
+	if action and tools.is_visible():
+		$animator.play("atk01")
 
 
 func _on_trigger_area_entered(area):
+	temp_item = area.get_parent()
+	print(temp_item.name)
+	
 	if area.is_in_group("item"):
 		_estou_vendo_item()
-		area.get_parent()._atualiza_item_pick_up()
+		temp_item._atualiza_item_pick_up()
 		
 
 
 func _on_trigger_area_exited(area):
 	emit_signal("nao_estou_vendo_item")
 	pass
-	
+
+
 func _estou_vendo_item() -> void:
 	emit_signal("estou_vendo_item")
 	pass
-	
+
+
+func _escuta_item_ativo() -> void:
+	if Gm.item.ativo:
+		match Gm.item.tipo:
+			"regador":
+				regador.visible = true
+			"tools":
+				pass
+
 
 
 

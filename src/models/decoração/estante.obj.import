@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/estante.obj-3717456b31d172bd5296fc2fdfb064b0.mesh"
+
+[deps]
+
+files=[ "res://.import/estante.obj-3717456b31d172bd5296fc2fdfb064b0.mesh" ]
+
+source_file="res://src/models/decoração/estante.obj"
+dest_files=[ "res://.import/estante.obj-3717456b31d172bd5296fc2fdfb064b0.mesh", "res://.import/estante.obj-3717456b31d172bd5296fc2fdfb064b0.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

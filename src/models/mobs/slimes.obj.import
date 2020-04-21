@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/slimes.obj-bad05f35d63c91ffc16f23cacd7a860e.mesh"
+
+[deps]
+
+files=[ "res://.import/slimes.obj-bad05f35d63c91ffc16f23cacd7a860e.mesh" ]
+
+source_file="res://src/models/mobs/slimes.obj"
+dest_files=[ "res://.import/slimes.obj-bad05f35d63c91ffc16f23cacd7a860e.mesh", "res://.import/slimes.obj-bad05f35d63c91ffc16f23cacd7a860e.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

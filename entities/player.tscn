@@ -1,10 +1,13 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://entities/fx_agua.tscn" type="PackedScene" id=1]
-[ext_resource path="res://src/textures/blender_2020-04-18_09-17-38.png" type="Texture" id=2]
+[ext_resource path="res://src/models/tools/tool_gardening_fork.obj" type="ArrayMesh" id=2]
 [ext_resource path="res://default_env.tres" type="Environment" id=3]
+[ext_resource path="res://src/models/tools/tool_gardening_shovel.obj" type="ArrayMesh" id=4]
 [ext_resource path="res://src/scripts/Player.gd" type="Script" id=5]
 [ext_resource path="res://src/scripts/Camera.gd" type="Script" id=6]
+[ext_resource path="res://src/textures/UI/MapPlayer.png" type="Texture" id=7]
+[ext_resource path="res://src/materials/material_cute.tres" type="Material" id=8]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "Plane.001"
@@ -75,6 +78,161 @@ height = 3.35093
 [sub_resource type="BoxShape" id=8]
 extents = Vector3( 0.83707, 0.743689, 1.64986 )
 
+[sub_resource type="Animation" id=9]
+resource_name = "atk01"
+length = 0.55
+step = 0.05
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Camera/item/tools/tool_gardening_shovel:translation:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 2.167, -0.25, 0, 0.25, 0, 2.279, -0.25, 0, 0.25, 0, 2.279, -0.25, 0, 0.25, 0, 2.167, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.05, 0.1, 0.45 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Camera/item/tools/tool_gardening_shovel:translation:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( -1.395, -0.25, 0, 0.25, 0, -1.198, -0.25, 0, 0.25, 0, -0.843, -0.25, 0, 0.25, 0, -1.395, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.05, 0.1, 0.45 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("Camera/item/tools/tool_gardening_shovel:translation:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( -0.777, -0.25, 0, 0.25, 0, -0.511, -0.25, 0, 0.25, 0, -0.511, -0.25, 0, 0.25, 0, -0.777, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.05, 0.1, 0.45 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("Camera/item/tools/tool_gardening_shovel:rotation_degrees:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( -35.7307, -0.25, 0, 0.25, 0, -65, -0.25, 0, 0.25, 0, -51.581, -0.25, 0, 0.25, 0, -53, -0.25, 0, 0.25, 0, -35.7307, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.1, 0.3, 0.35, 0.45 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("Camera/item/tools/tool_gardening_shovel:rotation_degrees:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( -36.4523, -0.25, 0, 0.25, 0, -43, -0.25, 0, 0.25, 0, -38.521, -0.25, 0, 0.25, 0, -40, -0.25, 0, 0.25, 0, -36.4523, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.1, 0.3, 0.35, 0.45 )
+}
+tracks/5/type = "bezier"
+tracks/5/path = NodePath("Camera/item/tools/tool_gardening_shovel:rotation_degrees:z")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"points": PoolRealArray( 56.485, -0.25, 0, 0.25, 0, 70, -0.25, 0, 0.25, 0, 71, -0.25, 0, 0.25, 0, 71, -0.25, 0, 0.25, 0, 56.485, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.1, 0.3, 0.35, 0.45 )
+}
+tracks/6/type = "bezier"
+tracks/6/path = NodePath("Camera/item/tools/tool_gardening_shovel:scale:x")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"points": PoolRealArray( 0.869, -0.25, 0, 0.25, 0, 0.869, -0.25, 0, 0.25, 0, 0.869, -0.25, 0, 0.25, 0, 0.869, -0.25, 0, 0.25, 0, 0.869, -0.25, 0, 0.25, 0, 0.869, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.05, 0.1, 0.3, 0.35, 0.45 )
+}
+tracks/7/type = "bezier"
+tracks/7/path = NodePath("Camera/item/tools/tool_gardening_shovel:scale:y")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"points": PoolRealArray( 0.869, -0.25, 0, 0.25, 0, 0.932, -0.25, 0, 0.25, 0, 0.77, -0.25, 0, 0.25, 0, 2.298, -0.25, 0, 0.25, 0, 1.999, -0.25, 0, 0.25, 0, 0.869, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.05, 0.1, 0.3, 0.35, 0.45 )
+}
+tracks/8/type = "bezier"
+tracks/8/path = NodePath("Camera/item/tools/tool_gardening_shovel:scale:z")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"points": PoolRealArray( 0.958, -0.25, 0, 0.25, 0, 1.021, -0.25, 0, 0.25, 0, 1.022, -0.25, 0, 0.25, 0, 1.63, -0.25, 0, 0.25, 0, 0.958, -0.25, 0, 0.25, 0, 0.958, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.05, 0.1, 0.3, 0.35, 0.45 )
+}
+tracks/9/type = "bezier"
+tracks/9/path = NodePath("Camera/item/tools/tool_gardening_fork:rotation_degrees:x")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"points": PoolRealArray( -51.2302, -0.25, 0, 0.25, 0, -51.242, -0.25, 0, 0.25, 0, -51.851, -0.25, 0, 0.25, 0, -51.841, -0.25, 0, 0.25, 0, -51.2302, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.1, 0.15, 0.25, 0.3, 0.55 )
+}
+tracks/10/type = "bezier"
+tracks/10/path = NodePath("Camera/item/tools/tool_gardening_fork:rotation_degrees:y")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"points": PoolRealArray( 50.3363, -0.25, 0, 0.25, 0, 49.957, -0.25, 0, 0.25, 0, 9.047, -0.25, 0, 0.25, 0, 9.114, -0.25, 0, 0.25, 0, 50.3363, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.1, 0.15, 0.25, 0.3, 0.55 )
+}
+tracks/11/type = "bezier"
+tracks/11/path = NodePath("Camera/item/tools/tool_gardening_fork:rotation_degrees:z")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"points": PoolRealArray( -64.1001, -0.25, 0, 0.25, 0, -61.175, -0.25, 0, 0.25, 0, -64.759, -0.25, 0, 0.25, 0, -64.748, -0.25, 0, 0.25, 0, -64.1001, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.1, 0.15, 0.25, 0.3, 0.55 )
+}
+tracks/12/type = "bezier"
+tracks/12/path = NodePath("Camera/item/tools/tool_gardening_fork:translation:x")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"points": PoolRealArray( -2.158, -0.25, 0, 0.25, 0, -2.166, -0.25, 0, 0.25, 0, -2.568, -0.25, 0, 0.25, 0, -2.684, -0.25, 0, 0.25, 0, -2.158, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.1, 0.15, 0.25, 0.3, 0.55 )
+}
+tracks/13/type = "bezier"
+tracks/13/path = NodePath("Camera/item/tools/tool_gardening_fork:translation:y")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"points": PoolRealArray( -1.343, -0.25, 0, 0.25, 0, -1.341, -0.25, 0, 0.25, 0, -1.248, -0.25, 0, 0.25, 0, -1.233, -0.25, 0, 0.25, 0, -1.343, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.1, 0.15, 0.25, 0.3, 0.55 )
+}
+tracks/14/type = "bezier"
+tracks/14/path = NodePath("Camera/item/tools/tool_gardening_fork:translation:z")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"points": PoolRealArray( -0.615, -0.25, 0, 0.25, 0, -0.57, -0.25, 0, 0.25, 0, -0.834, -0.25, 0, 0.25, 0, -0.826, -0.25, 0, 0.25, 0, -0.615, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.1, 0.15, 0.25, 0.3, 0.55 )
+}
+
 [node name="Player" type="KinematicBody"]
 script = ExtResource( 5 )
 Sensitivity_X = 0.009
@@ -83,47 +241,61 @@ Maximum_Y_Look = 25
 Jump_Speed = 3
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.13899, -1.36769 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0175962, 1.29939, -1.01625 )
 environment = ExtResource( 3 )
 script = ExtResource( 6 )
 
-[node name="regador" type="Spatial" parent="Camera"]
+[node name="item" type="Spatial" parent="Camera"]
+
+[node name="regador" type="Spatial" parent="Camera/item"]
 transform = Transform( 0.39766, -0.0536125, 0.071488, 0.0436321, 0.401053, 0.0580618, -0.0779812, -0.0489962, 0.397035, 1.328, -1.119, -1.609 )
 visible = false
 
-[node name="mesh" type="MeshInstance" parent="Camera/regador"]
+[node name="mesh" type="MeshInstance" parent="Camera/item/regador"]
 
-[node name="Plane001" type="MeshInstance" parent="Camera/regador/mesh"]
+[node name="Plane001" type="MeshInstance" parent="Camera/item/regador/mesh"]
 transform = Transform( -2.24341e-09, 2.58382e-08, -0.588868, -0.373692, 0.0326938, 2.85818e-09, 0.0398621, 0.455626, 1.984e-08, -0.0491829, 1.55292, 1.56708 )
 mesh = SubResource( 1 )
 material/0 = SubResource( 2 )
 
-[node name="Plane" type="MeshInstance" parent="Camera/regador/mesh"]
+[node name="Plane" type="MeshInstance" parent="Camera/item/regador/mesh"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 0.709517, 0.0312436, 2.75112, 0.0811264 )
 mesh = SubResource( 3 )
 material/0 = SubResource( 2 )
 
-[node name="Cube001" type="MeshInstance" parent="Camera/regador/mesh"]
+[node name="Cube001" type="MeshInstance" parent="Camera/item/regador/mesh"]
 transform = Transform( 0.173793, -1.51935e-08, -1.51935e-08, -1.51935e-08, -0.173793, 0, -1.51935e-08, 1.32826e-15, -0.173793, -0.00542992, 0.528903, -0.900035 )
 mesh = SubResource( 4 )
 material/0 = SubResource( 2 )
 
-[node name="Cylinder001" type="MeshInstance" parent="Camera/regador/mesh"]
+[node name="Cylinder001" type="MeshInstance" parent="Camera/item/regador/mesh"]
 transform = Transform( 0.980127, -2.54729e-07, -0.198369, 3.25841e-07, 1, 3.25841e-07, 0.198369, -3.84002e-07, 0.980127, 0.0079408, 1.00154, 0.118265 )
 mesh = SubResource( 5 )
 material/0 = SubResource( 2 )
 
-[node name="fx_agua" parent="Camera/regador" instance=ExtResource( 1 )]
+[node name="fx_agua" parent="Camera/item/regador" instance=ExtResource( 1 )]
 transform = Transform( 0.53432, 0.00400545, -0.0889751, -0.0320832, 0.841224, -0.166659, 0.0863692, 0.287706, 0.488534, 0.16538, 0.332598, -3.16897 )
 visible = false
 
+[node name="tools" type="Spatial" parent="Camera/item"]
+
+[node name="tool_gardening_fork" type="MeshInstance" parent="Camera/item/tools"]
+transform = Transform( 0.711177, 0.271028, 0.418733, -0.489313, 0.237596, 0.677264, 0.0967796, -0.790353, 0.347191, -2.158, -1.343, -0.615 )
+mesh = ExtResource( 2 )
+material/0 = ExtResource( 8 )
+
+[node name="tool_gardening_shovel" type="MeshInstance" parent="Camera/item/tools"]
+transform = Transform( 0.637335, -0.416284, -0.462059, 0.588145, 0.389507, 0.559449, -0.0552346, -0.65586, 0.625525, 2.167, -1.395, -0.777 )
+mesh = ExtResource( 4 )
+material/0 = ExtResource( 8 )
+
 [node name="MeshInstance" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, -2.84951e-07, -1.74902, 0, 1, -1.62921e-07, 0, 0, 0 )
+transform = Transform( 1, 0, 0, 0, -1.97253e-07, -1.21073, 0, 0.836921, -1.36352e-07, 0, 0, 0 )
 mesh = SubResource( 6 )
 material/0 = null
 
 [node name="collider" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )
+transform = Transform( 1, 0, 0, 0, -3.02586e-08, -0.692235, 0, 0.836921, -3.6583e-08, 0, 0, 0 )
 shape = SubResource( 7 )
 
 [node name="trigger" type="Area" parent="."]
@@ -133,54 +305,13 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.917776, -1.97556 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.070426, -0.0999913, -0.649266 )
 shape = SubResource( 8 )
 
-[node name="PopupPanel" type="PopupPanel" parent="."]
-anchor_left = 0.373
-anchor_top = 0.302
-anchor_right = 0.617
-anchor_bottom = 0.631
-margin_left = 0.359802
-margin_top = 0.126984
-margin_right = 0.503784
-margin_bottom = -0.273041
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
+[node name="MapPlayer" type="Sprite3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.0761, 0 )
+layers = 2
+axis = 1
+texture = ExtResource( 7 )
 
-[node name="HBoxContainer" type="CenterContainer" parent="PopupPanel"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 4.0
-margin_top = 4.0
-margin_right = -4.0
-margin_bottom = -4.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="VBoxContainer" type="VBoxContainer" parent="PopupPanel/HBoxContainer"]
-margin_left = 92.0
-margin_top = 48.0
-margin_right = 211.0
-margin_bottom = 180.0
-
-[node name="tittle" type="Label" parent="PopupPanel/HBoxContainer/VBoxContainer"]
-margin_right = 119.0
-margin_bottom = 14.0
-text = "watering can"
-align = 1
-
-[node name="img" type="TextureRect" parent="PopupPanel/HBoxContainer/VBoxContainer"]
-margin_top = 18.0
-margin_right = 119.0
-margin_bottom = 114.0
-texture = ExtResource( 2 )
-
-[node name="action" type="Label" parent="PopupPanel/HBoxContainer/VBoxContainer"]
-margin_top = 118.0
-margin_right = 119.0
-margin_bottom = 132.0
-text = "Press 'E' to pick"
-align = 1
+[node name="animator" type="AnimationPlayer" parent="."]
+anims/atk01 = SubResource( 9 )
 [connection signal="area_entered" from="trigger" to="." method="_on_trigger_area_entered"]
 [connection signal="area_exited" from="trigger" to="." method="_on_trigger_area_exited"]
